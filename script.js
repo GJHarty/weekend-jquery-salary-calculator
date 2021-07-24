@@ -9,6 +9,7 @@ function onReady(){
 }
 
 let employees = [];
+let maximumMonthlyCost = 20000;
 
 function onSubmit(event){
     // stop form from executing default behavior
@@ -58,6 +59,15 @@ function onSubmit(event){
         }
         console.log('monthly cost', monthlyCost);
         $('#monthlyCost').text(`$${monthlyCost.toFixed(2)}`)
+
+        // check to see if monthly cost exceeds $20,000
+        if (monthlyCost > maximumMonthlyCost){
+            $('#monthlyCost').css('background-color', 'red');
+            $('#monthlyCost').css('color', 'black');
+            alert(`WARNING: Monthly cost of employees has exceeded the maximum allowed amount of $${maximumMonthlyCost.toFixed(2)}`);
+        } else {
+            $('#monthlyCost').css('color', 'green');
+        }
     } else {
         alert('Please complete all fields before submitting');
     }

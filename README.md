@@ -19,11 +19,11 @@ Making an app that tracks user input employees and displays them on a table
     [x] ID
     [x] Title
     [x] Salary
-[] submit button
-    [] grab values from input fields
-    [] render a new table row with info from input fields
-[] total monthly costs 
-    [] update on employee add
+[x] submit button
+    [x] grab values from input fields
+    [x] render a new table row with info from input fields
+[x] total monthly costs 
+    [x] update on employee add
 [] delete button for employee
     [] reduces monthly expense upon delete
 ## Stretch Goal

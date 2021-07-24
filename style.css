@@ -53,6 +53,8 @@ td {
 
 #submitBtn {
     float: right;
+    font-size: 20px;
+    padding: 5px 10px;
 }
 
 tr:nth-child(even) {
@@ -61,4 +63,11 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background: #FFF;
+}
+
+.monthlyCostClass {
+    float: right;
+    margin: 20px 70px;
+    padding: 10px;
+    font-size: 30px;
 }
