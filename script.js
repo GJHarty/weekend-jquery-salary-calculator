@@ -27,9 +27,24 @@ function onSubmit(event){
     console.log('employee', employee);
     // add employee to global array
     employees.push(employee);
+    console.log('employees', employees);
 
     // clear input fields
-    $('#input').val('');
+    $('input').val('');
 
-    
+    // empty table
+    $('#employeeTable').empty();
+
+    // loop through employee array and append to table
+    for (let employee of employees) {
+        $('#employeeTable').append(`
+            <tr>
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.id}</td>
+                <td>${employee.title}</td>
+                <td>${employee.annualSalary}</td>
+            </tr>
+        `);
+    };
 }
