@@ -24,8 +24,9 @@ Making an app that tracks user input employees and displays them on a table
     [x] render a new table row with info from input fields
 [x] total monthly costs 
     [x] update on employee add
-[] delete button for employee
-    [] reduces monthly expense upon delete
+    [x] make sure monthly costs do not exceed maximum
+[x] delete button for employee
+    [x] reduces monthly expense upon delete
 ## Stretch Goal
 [] add in extra functionality
 

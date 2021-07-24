@@ -6,6 +6,9 @@ function onReady(){
 
     // target form submission click event
     $('#employeeForm').on('submit', onSubmit);
+
+    // add delete click event
+    $(document).on('click', '#deleteBtn', deleteButton)
 }
 
 let employees = [];
@@ -47,7 +50,10 @@ function onSubmit(event){
                     <td>${employee.lastName}</td>
                     <td>${employee.id}</td>
                     <td>${employee.title}</td>
-                    <td>${employee.annualSalary}</td>
+                    <td id="salary">${employee.annualSalary.toFixed(2)}</td>
+                    <td>
+                        <button id="deleteBtn">Delete</button>
+                    </td>
                 </tr>
             `);
         };
@@ -58,7 +64,7 @@ function onSubmit(event){
             monthlyCost += employee.annualSalary / 12;
         }
         console.log('monthly cost', monthlyCost);
-        $('#monthlyCost').text(`$${monthlyCost.toFixed(2)}`)
+        $('#monthlyCost').text(`${monthlyCost.toFixed(2)}`)
 
         // check to see if monthly cost exceeds $20,000
         if (monthlyCost > maximumMonthlyCost){
@@ -75,6 +81,7 @@ function onSubmit(event){
 
 //create input validation for missing inputs
 function readyToSubmit(){
+    // if any inputs are null return false
     switch (true) {
         case !$('#fname').val():
         case !$('#lname').val():
@@ -86,4 +93,31 @@ function readyToSubmit(){
         default:
             return true;
     }
+}
+
+// deleteBtn handler
+function deleteButton() {
+    // get salary
+    let salary = Number($(this)
+                    .parent()
+                    .siblings('#salary').html()).toFixed(2);
+    console.log('salary',salary);
+    console.log(salary / 12);
+
+    // target monthly cost
+    let monthlyCost = Number($('#monthlyCost').text()).toFixed(2);
+    console.log('monthly cost', monthlyCost);
+
+    //calculate new monthly cost
+    monthlyCost = (monthlyCost - (salary / 12).toFixed(2));
+    console.log('new monthly cost', monthlyCost);
+
+    //cast new monthlyCost
+    $('#monthlyCost').text(`${monthlyCost.toFixed(2)}`);
+
+    //target row that button is in and remove that row
+    $(this)
+        .parent()
+        .parent()
+        .remove();
 }

@@ -71,3 +71,11 @@ tr:nth-child(odd) {
     padding: 10px;
     font-size: 30px;
 }
+
+#deleteColumn {
+    width: 100px;
+}
+
+#deleteBtn {
+    width: 100px;
+}
