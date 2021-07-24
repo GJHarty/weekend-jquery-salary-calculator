@@ -50,6 +50,14 @@ function onSubmit(event){
                 </tr>
             `);
         };
+
+        //calculate monthly cost of employee
+        let monthlyCost = 0;
+        for (let employee of employees) {
+            monthlyCost += employee.annualSalary / 12;
+        }
+        console.log('monthly cost', monthlyCost);
+        $('#monthlyCost').text(`$${monthlyCost.toFixed(2)}`)
     } else {
         alert('Please complete all fields before submitting');
     }
