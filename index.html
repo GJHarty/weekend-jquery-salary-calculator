@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Add Employee</h1>
+    <div class="addEmployee">
+        <form action="employees.php" method="get">
+            <input type="text" id="fname" name="fname" placeholder="First Name">
+            <input type="text" id="lname" name="lname" placeholder="Last Name">
+            <input type="text" id="id" name="id" placeholder="ID">
+            <input type="text" id="title" name="title" placeholder="Title">
+            <input type="number" id="annualSalary" name="annualSalary" placeholder="Annual Salary"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <h1>Employees</h1>
+    <div class="employeeDiv">
+        <table class="employeeTable">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salaray</th>
+            </tr>
+            <!-- Here is where we add our data from the form -->
+            <tr>
+                
+                <td>test</td>
+                <td>test2</td>
+            </tr>
+        </table>
+    </div> 
+    <div class="monthlyCost">
+        Total Monthly:
+    </div>
+</body>
+</html>

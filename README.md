@@ -1,9 +1,31 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Employee Tracker
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Making an app that tracks user input employees and displays them on a table
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## To-Do List
+
+[x] setup
+    [x] index.html setup
+    [x] stylesheet
+    [x] source jquery
+    [x] source new js script
+[x] Form field with fields for
+    [x] First Name
+    [x] Last Name
+    [x] ID
+    [x] Title
+    [x] Salary
+[] submit button
+    [] grab values from input fields
+    [] render a new table row with info from input fields
+[] total monthly costs 
+    [] update on employee add
+[] delete button for employee
+    [] reduces monthly expense upon delete
+## Stretch Goal
+[] add in extra functionality
+
